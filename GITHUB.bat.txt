@@ -1,0 +1,15 @@
+@echo off
+cd /d "%~dp0"
+
+set USUARIO=TU_USUARIO_DE_GITHUB
+set TOKEN=TU_TOKEN_ghp_xxxxx
+set REPO=chat-con-toto
+
+git init
+git add .
+git commit -m "Subir chat completo"
+git branch -M main
+git remote add origin https://%USUARIO%:%TOKEN%@github.com/%USUARIO%/%REPO%.git
+git push -u origin main
+
+pause
